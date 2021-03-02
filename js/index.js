@@ -5,7 +5,7 @@
      menu.style.left = 0
  })
  btnClose.addEventListener('click',()=>{
-    menu.style.left = "-1000px"
+    menu.style.left = "-2500px"
 })
 
 // testing
