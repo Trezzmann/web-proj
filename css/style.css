@@ -135,15 +135,15 @@ body{
 .menu{
     margin-top: 35px;
     display: flex;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #040041 ;
+    font-family: 'Montserrat' ,'Source Sans Pro', sans-serif;
+    font-weight: 900;
     font-size:1rem ;
 }
 .m-item{
     list-style-type: none;
     padding: 8px 10px;
     box-sizing: border-box;
+    color: #040041 ;
     transition: .3s all;
 }
 .m-item:hover{
@@ -153,17 +153,21 @@ body{
     text-decoration: none;
     color: #040041 ;
 }
+
+.m-item:hover .menu-items>a{
+    color: #040041 ;
+}
 .menu-items{
    margin: 0;
    padding: 0;
    display: none;
-   background-color:white;
    transition: 1.5s  all;
 }
 
 .m-item:hover .menu-items{
     position: absolute;
     display: block;
+    background-color:#7fff7b;
     z-index: 1000;
     width: 300px;
     transform: translateY(10px);
@@ -173,11 +177,16 @@ body{
     list-style-type: none;
     padding: 12px 50px 12px 10px;
     transition: 0.9s all ease;
+    color: #040041;
     width: 100%;
 }
 
-.menu-items li:hover{
-    background-color:#7fff7b;
+.menu-items li:hover {
+    color:#7fff7b;
+    background-color: #040041;
+}
+.menu-items li:hover a{
+    color:#7fff7b;
 }
 
 
@@ -223,6 +232,7 @@ body{
         max-height: 200px;
     }
     .m-item {
+        
         text-align: center;
         width: 100%;
         max-height: 400px;
@@ -373,7 +383,7 @@ body{
 }
 .news-item .news-text{
     padding: 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat' ,'Source Sans Pro', sans-serif;
     font-weight: 100;
 }
 .news-item h6{
@@ -401,7 +411,7 @@ body{
         max-width: 450px; 
     }
     .news-item p{
-        font-size: 0.8rem;
+        font-size: .9rem;
     }
     .news-item  a{
         width: 60%;
@@ -423,6 +433,9 @@ body{
     }
     .news-item img:nth-child(even){
         border-left: none;
+    }
+    .news-item p{
+        font-size: 1.1rem;
     }
 }
 
@@ -482,7 +495,7 @@ body{
     background-color: #7fff7b;
     color: #040041;
     font-size: .9em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat' ,'Source Sans Pro', sans-serif;
 }
 
 /* media query for ARTICLE2 */
@@ -518,7 +531,7 @@ body{
     width: 250px;
     height: 300px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat' ,'Source Sans Pro', sans-serif;
     
 }
 
@@ -544,12 +557,15 @@ body{
 
 .parent-others{
     margin-bottom: 200px;
+    width: 100%;
+    margin: auto;
 }
 .others{
     max-width: 1140px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    font-family: 'Montserrat','O', sans-serif;
 }
 .others-item{
     display: flex;
@@ -565,9 +581,10 @@ body{
 .box:hover{
     max-height: 900px;
 }
-.box h5{
-    border: 1px solid rgb(119, 119, 119);
+.box h6{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     font-size: .8rem;
+    font-weight: 700;
     margin: 0;
     padding: 18px;
 }
@@ -585,19 +602,38 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat' ,'Source Sans Pro', sans-serif;
+}
+.box2-text h6,span{
+    font-size: .8rem;
+
+}
+.others-item h5{
+        font-weight: 700;
 }
 .box2 img{
     height: 30px;
 }
 
+/* responsive for others bloc */
+
+@media screen and (max-width:960px){
+    .others{
+        flex-wrap: wrap;
+    }
+    .box{
+        width: 100%;
+    }
+}
+
 /* footer style */
 .footer{
-    min-height: 400px;
+
+    margin-top: 50px;
     width: 100%;
     background-color: #090433;
     color: rgb(119, 255, 101);
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat' ,'Source Sans Pro', sans-serif;
 }
 .footer-boxes{
     display: flex;
@@ -626,6 +662,7 @@ body{
     margin: auto;
 }
 .footer-info{
+    margin-top: 120px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -635,6 +672,10 @@ body{
     text-align: center;
     max-width: 450px;
     margin: 30px 0px;
+}
+.footer-info img{
+    background-color: #01fc72;
+    padding: 10px 30px;
 }
 
 .submit-footer,.input-footer{
@@ -647,7 +688,16 @@ body{
     background-color: #01fc72;
 }
 
-  /*# sourceMappingURL=style2.css.map */
+/* media query for footer */
+
+@media screen and (max-width:900px){
+    .footer-boxes{
+        flex-wrap: wrap;
+    }
+    .box-footer{
+        width: 100%;
+    }
+}
   
 
 @keyframes slide{
